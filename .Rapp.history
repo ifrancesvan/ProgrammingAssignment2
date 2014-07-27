@@ -1,0 +1,138 @@
+This program will obtain the inverse of a matrix, but first#
+## it will check if the inverse of such matrix (that the user introduces in ## the program) has already been calculated, if it does then it returns the ## value, if not it will calculate the inverse of the matrix and then return ## the inverse.#
+#
+## This function will set and get the matrix and its inverse. #
+#
+makeCacheMatrix <- function(x = matrix()) {#
+        m <- NULL#
+        set <- function(y) {#
+                x <<- y#
+                m <<- NULL#
+        }#
+        get <- function() x#
+        setinverse <- function(inverse) m <<- inverse#
+        getinverse <- function() m#
+        list(set = set, get = get,#
+             setinverse = setinverse,#
+             getinverse = getinverse)#
+}#
+## This function will check if the inverse has already been calculates, if ## not it will calculate it.#
+#
+cacheSolve <- function(x, ...) {#
+              m <- x$getinverse()#
+        if(!is.null(m)) {#
+                message("getting cached data")#
+                return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(data, ...)#
+        x$setinverse(m)#
+        m#
+}
+amatrix<-matrix(1:4,2,2)
+amatrix
+makeCacheMatrix(amatrix)
+amatrix$getinverse()
+amatrix$get()
+amatrix
+makeCacheMatrix(amatrix)
+amatrix= makeCacheMatrix(matrix(c(1,2,3,4), nrow=2, ncol=2)
+)
+amatrix$get()
+cacheSolve (amatrix)
+amatrix$getinverse()
+a
+a<-matrix(1:4, 2, 2)
+a
+a$cacheSolve
+a
+makeCacheMatrix(a)
+a<- makeCacheMatrix(matrix(c(1,0,0,0,1,0,0,0,1),3,3))
+a
+makeCacheMatrix(matrix(c(1,0,0,0,1,0,0,0,1),3,3)
+)
+a
+a$get
+a$get()
+cacheSolve(a)
+a
+This program will obtain the inverse of a matrix, but first#
+## it will check if the inverse of such matrix (that the user introduces in ## the program) has already been calculated, if it does then it returns the ## value, if not it will calculate the inverse of the matrix and then return ## the inverse.#
+#
+## This function will set and get the matrix and its inverse. #
+#
+makeCacheMatrix <- function(x = matrix()) {#
+        m <- NULL#
+        set <- function(y) {#
+                x <<- y#
+                m <<- NULL#
+        }#
+        get <- function() x#
+        setinverse <- function(inverse) m <<- inverse#
+        getinverse <- function() m#
+        list(set = set, get = get,#
+             setinverse = setinverse,#
+             getinverse = getinverse)#
+}#
+## This function will check if the inverse has already been calculates, if ## not it will calculate it.#
+#
+cacheSolve <- function(x, ...) {#
+              m <- x$getinverse()#
+        if(!is.null(m)) {#
+                message("getting cached data")#
+                return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(data, ...)#
+        x$setinverse(m)#
+        m#
+        return(cacheSolve(x))#
+}
+cacheSolve()
+m<-matrix(c(1,0,0,0,0,0,0,0,1),3,3)
+m
+cacheSolve(m)
+solve(m)
+m<-matrix(c(1,0,0,0,2,0,0,0,1),3,3)
+m
+solve(m)
+cacheSolve(m)
+m$get()
+makecacheMatrix(m)
+makeCacheMatrix(m)
+pr<-makeCacheMatrix(m)
+pr
+pr$get()
+This program will obtain the inverse of a matrix, but first#
+## it will check if the inverse of such matrix (that the user introduces in ## the program) has already been calculated, if it does then it returns the ## value, if not it will calculate the inverse of the matrix and then return ## the inverse.#
+#
+## This function will set and get the matrix and its inverse. #
+#
+makeCacheMatrix <- function(x = matrix()) {#
+        m <- NULL#
+        set <- function(y) {#
+                x <<- y#
+                m <<- NULL#
+        }#
+        get <- function() x#
+        setinverse <- function(inverse) m <<- inverse#
+        getinverse <- function() m#
+        list(set = set, get = get,#
+             setinverse = setinverse,#
+             getinverse = getinverse)#
+}#
+## This function will check if the inverse has already been calculates, if ## not it will calculate it.#
+#
+cacheSolve <- function(x, ...) {#
+              m <- x$getinverse()#
+        if(!is.null(m)) {#
+                message("getting cached data")#
+                return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(data, ...)#
+        x$setinverse(m)#
+        m#
+        return(cacheSolve(x))#
+}
+makeCacheMatrix(m)
